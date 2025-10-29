@@ -1,0 +1,20 @@
+# Dota 2 Data Parser Configuration
+
+data_sources:
+  liquipedia:
+    enabled: true
+    base_url: "https://liquipedia.net/dota2"
+    rate_limit: 2  # seconds between requests
+    user_agent: "Dota2DataParser/1.0 (Educational/Research)"
+
+  opendota:
+    enabled: true
+    base_url: "https://api.opendota.com/api"
+    api_key: null  # Optional - add your API key for higher rate limits
+    rate_limit: 1  # seconds between requests
+
+# Parsing options
+parsing:
+  cache_enabled: true
+  cache_dir: ".cache"
+  timeout: 30  # request timeout in seconds
